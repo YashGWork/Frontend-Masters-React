@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  --background-color: white;
+  --text-color: black;
+  --elements-color: white;
+  margin: 0;
+  font-family: "Varela Round", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  --background-color: hsl(222, 25%, 10%);
+  --text-color: hsl(210, 40%, 98%);
+  --elements-color: hsl(217, 19%, 18%);
+}
+
+main {
+  padding: 24px;
+}
+
+header {
+  user-select: none;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navContainer {
+  box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
+  padding-inline: 24px;
+  background-color: var(--elements-color);
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.title {
+  font-weight: 800;
+}
+
+.themeToggler {
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: 500;
+}
+
+body .sun {
+  display: none;
+}
+
+body.dark .moon {
+  display: none;
+}
+
+body.dark .sun {
+  display: block;
+}
+
+.resultsContainer {
+  max-width: 1200px;
+  margin-top: 16px;
+  display: flex;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+  margin-inline: auto;
+  justify-content: flex-start;
+}
+
+.countryCard {
+  display: inline-block;
+  width: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 1rem;
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  background-color: var(--elements-color);
+}
+
+.countryCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.countryCard img {
+  background-color: var(--text-color);
+  width: 100%;
+  height: 45%;
+  object-fit: cover;
+}
+
+.countryCard {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.countryName {
+  font-size: 24px;
+  margin-block: 16px;
+}
+
+.cardContent {
+  padding-inline: 16px;
+}
+
+.cardContent p {
+  margin-block: 8px;
+}
+
+.countryCard img {
+  width: 100%;
+}
+
+.filterContainer {
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-top: 16px;
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.searchContainer {
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
+  max-width: 350px;
+  width: 100%;
+  border-radius: 4px;
+  padding-left: 24px;
+  color: #999;
+  overflow: hidden;
+  background-color: var(--elements-color);
+  color: var(--text-color);
+}
+
+.searchContainer input {
+  border: none;
+  outline: none;
+  padding: 16px;
+  width: 90%;
+  background-color: inherit;
+  color: inherit;
+}
+
+.searchContainer input::placeholder {
+  color: #999;
+}
+
+.filterRegionContainer {
+  width: 250px;
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: var(--elements-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.filterRegion {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+  padding: 16px;
+}
+
+.filterRegion option {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .resultsContainer {
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .navContent p {
+    font-size: 12px;
+  }
+
+  .filterContainer {
+    flex-direction: column;
+  }
+}
+
+.shimmerCard h3,
+.shimmerCard span,
+.shimmerCard b {
+  background-color: rgb(211, 211, 211);
+  color: rgb(211, 211, 211);
+}
